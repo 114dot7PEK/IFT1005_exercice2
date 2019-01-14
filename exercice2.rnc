@@ -1,0 +1,29 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = element fbi {
+    element personnes {
+        element personne {
+        attribute id { xsd:ID },
+        attribute naissance { xsd:gYear },
+        attribute sexe { "F" | "M" },
+            (element prenom { text } &
+            element nom { text }),
+            element age { xsd:integer }
+        }*
+    },
+    element examens {
+        element examen {
+        attribute eid { xsd:ID },
+        attribute date { xsd:gYear },
+        attribute ville { text }
+        }*
+    },
+    element candidats {
+        element candidat {
+        attribute idref { xsd:IDREF },
+        attribute eidref { xsd:IDREF },
+        attribute evaluateur { xsd:IDREF },
+        attribute resultat { text }
+        }*
+    }
+}

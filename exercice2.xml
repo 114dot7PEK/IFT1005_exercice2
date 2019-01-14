@@ -1,0 +1,35 @@
+<?xml-model href="exercice2.rnc" type="application/relax-ng-compact-syntax"?>
+<fbi>
+	<personnes>
+		<personne id="p0" sexe="M" naissance="1994">
+			<prenom>Mihai</prenom>
+			<nom>Ionescu</nom>
+			<age>24</age>
+		</personne>
+		<personne id="p1" sexe="F" naissance="1999">
+			<prenom>Lilou</prenom>
+			<nom>Ionescu</nom>
+			<age>5</age>
+		</personne>
+		<personne id="p2" sexe="F" naissance="1991">
+			<prenom>Carla</prenom>
+			<nom>Abdelnour</nom>
+			<age>21</age>
+		</personne>
+		<personne id="p3" sexe="M" naissance="1989">
+			<nom>Brou</nom>
+			<prenom>Mathieu</prenom>
+			<age>24</age>
+		</personne>
+	</personnes>
+	<examens>
+		<examen eid="e0" date="2000" ville="Paris"/>
+		<examen eid="e1" date="2001" ville="Montreal"/>
+		<examen eid="e2" date="2002" ville="Londres"/>
+		<examen eid="e3" date="2003" ville="New York"/>
+	</examens>
+	<candidats>
+		<candidat idref="p2" eidref="e0" evaluateur="p0" resultat="98.25"/>
+		<candidat idref="p3" eidref="e3" evaluateur="p1" resultat="52.50"/>
+	</candidats>
+</fbi>
