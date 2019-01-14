@@ -23,7 +23,7 @@ start = element fbi {
         attribute idref { xsd:IDREF },
         attribute eidref { xsd:IDREF },
         attribute evaluateur { xsd:IDREF },
-        attribute resultat { text }
+        attribute resultat { xsd:double }
         }*
     }
 }
